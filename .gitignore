@@ -1,0 +1,64 @@
+# ====================================================================
+# C# .NET Core / .NET Standard / .NET Framework Gitignore Template
+# ====================================================================
+
+# --------------------------------------------------------------------
+# Build Outputs & Artifacts
+# --------------------------------------------------------------------
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+Generated_Code/
+
+# --------------------------------------------------------------------
+# Developer / IDE User Settings (Visual Studio)
+# --------------------------------------------------------------------
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Cache and Workspaces
+.vs/
+_ReSharper*/
+*.DotSettings.user
+
+# --------------------------------------------------------------------
+# JetBrains Rider & VS Code Workspace Settings
+# --------------------------------------------------------------------
+.idea/
+.vscode/
+# Keep essential launch/task configs if shared with the team
+!.vscode/launch.json
+!.vscode/tasks.json
+
+# --------------------------------------------------------------------
+# Package Manager & Dependency Directories
+# --------------------------------------------------------------------
+# NuGet packages directory
+packages/
+*.nuget.props
+*.nuget.targets
+
+# Node / Frontend dependencies (if using ASP.NET Core Single Page Apps)
+node_modules/
+
+# --------------------------------------------------------------------
+# Operating System & Diagnostic Files
+# --------------------------------------------------------------------
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Crash dumps and test execution summaries
+*.tss
+*.log
+TestResults/
+*.trx
