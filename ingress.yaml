@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: catalogo-api
+  annotations:
+    # diz ao k3s que é o Traefik quem cuida deste Ingress
+    traefik.ingress.kubernetes.io/router.entrypoints: web
+spec:
+  ingressClassName: traefik
+  rules:
+    - http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: catalogo-api
+                port:
+                  number: 80        # a porta do Service (não a do container)
