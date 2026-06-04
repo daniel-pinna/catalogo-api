@@ -1,0 +1,21 @@
+name: CI/CD Catalogo
+
+# Gatilho: roda quando houver push na branch main
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    # roda no SEU runner (o vps-pinna), não na nuvem do GitHub
+    runs-on: self-hosted
+
+    steps:
+      # 1. baixa o código do repositório pro runner
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      # 2. builda a imagem usando seu Dockerfile (contexto = raiz)
+      - name: Build da imagem Docker
+        run: docker build -t catalogo-api-image:ci-test .
